@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,191 +11,208 @@
         html {
             scroll-behavior: smooth;
         }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar a.active {
+            background-color: #ffcd19;
+            color: black;
+        }
+        .navbar .icon {
+            display: none;
+        }
+        @media screen and (max-width: 600px) {
+            .navbar a:not(:first-child) {display: none;}
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .navbar.responsive {position: relative;}
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
     </style>
 </head>
-
 <body>
 
-    <div class="navbar">
+<div class="navbar" id="myNavbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class='bx bx-menu'></i>
+    </a>
+</div>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myNavbar");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>
+
+<div class="main" id="home">
+    <h4><span class="typewriter">
+        <h4>Shreyas H S</h4>
+    </span></h4>
+    <p class="title">Full stack Developer</p>
+    <p class="subtitle">I'm a passionate MERN Stack Developer</p>
+</div>
+
+<h5 class="seprator" id="about">Shreyas H S</h5>
+
+<div class="about">
+    <img src="https://avatars.githubusercontent.com/u/104050227?s=400&u=2a0603c94682f3e892de6cef9f4dbd7447650cdc&v=4">
+    <div class="info">
+        <h3>About Me</h3>
+        <p> A passionate web developer with a keen interest in creating dynamic and user-friendly web applications.</p>
+        <p> I specialize in the MERN stack (MongoDB, Express.js, React.js, Node.js) for building robust and scalable web solutions.</p>
+        <p> Continuously expanding my skills and knowledge in web development, I am always eager to explore new technologies and frameworks to enhance my expertise.</p>
+        <p> I thrive in collaborative environments and enjoy working in teams to tackle complex challenges and deliver exceptional results.</p>
+        <p> Apart from coding, I also enjoy exploring new trends in web development and experimenting with different design concepts.</p>
+        <br/>
+        <p>Languages Known: English, Hindi, Kannada, Tulu</p>            
     </div>
+    <button class="hire-btn" onclick="downloadResume()">Resume</button>
+</div>
 
-    <div class="main" id="home">
-        </h4><span class="typewriter">
-            <h4>Shreyas H S</h4>
-        </span>
-        <p class="title">Full stack Developer</p>
-        <p class="subtitle">I'm a passionate MERN Stack Developer</p>
-    </div>
+<h5 class="seprator" id="skills">My Skills</h5>
 
-    <h5 class="seprator" id="about">Shreyas H S</h5>
-
-    <div class="about">
-        <img src="https://avatars.githubusercontent.com/u/104050227?s=400&u=2a0603c94682f3e892de6cef9f4dbd7447650cdc&v=4">
+<div class="skills">
+    <div class="left">
         <div class="info">
-            <h3>About Me</h3>
-            <p> A passionate web developer with a keen interest in creating dynamic and user-friendly web applications.</p>
-            <p> I specialize in the MERN stack (MongoDB, Express.js, React.js, Node.js) for building robust and scalable web solutions.</p>
-            <p> Continuously expanding my skills and knowledge in web development, I am always eager to explore new technologies and frameworks to enhance my expertise.</p>
-            <p> I thrive in collaborative environments and enjoy working in teams to tackle complex challenges and deliver exceptional results.</p>
-            <p> Apart from coding, I also enjoy exploring new trends in web development and experimenting with different design concepts.</p>
-            <br/>
-            <p>Languages Known: English, Hindi, Kannada, Tulu</p>            
-        </p>
-            <button class="hire-btn" onclick="downloadResume()">Resume</button>
-
+            <h3>My Programming Skills</h3>
+            <p>
+                I specialize in crafting intuitive and efficient user interfaces that streamline user interactions and simplify complex tasks.
+            </p>
+            <p>
+                With a focus on web development using the MERN stack, I create dynamic and responsive applications that empower users to accomplish their goals seamlessly.
+            </p>
+            <p>
+                Additionally, I've delved into projects that intersect with cybersecurity, leveraging my web development skills to bolster security measures and protect digital assets.
+            </p>
         </div>
     </div>
 
-    <h5 class="seprator" id="skills">My Skills</h5>
-
-    <div class="skills">
-        <div class="left">
-            <div class="info">
-                <h3>My Programming Skills</h3>
-                <p>
-                    I specialize in crafting intuitive and efficient user interfaces that streamline user interactions and simplify complex tasks.
-                </p>
-                <p>
-                    With a focus on web development using the MERN stack, I create dynamic and responsive applications that empower users to accomplish their goals seamlessly.
-                </p>
-                <p>
-                    Additionally, I've delved into projects that intersect with cybersecurity, leveraging my web development skills to bolster security measures and protect digital assets.
-                </p>
-                
-            </div>
-        </div>
-
-        <div class="right">
-            <div class="item">
-                <i class='bx bxl-html5'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-css3'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-react'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-javascript'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-docker'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-git'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-mongodb'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-python'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-nodejs'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-c-plus-plus'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-tailwind-css'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-github'></i>
-            </div>
-        </div>
-
+    <div class="right">
+        <div class="item"><i class='bx bxl-html5'></i></div>
+        <div class="item"><i class='bx bxl-css3'></i></div>
+        <div class="item"><i class='bx bxl-react'></i></div>
+        <div class="item"><i class='bx bxl-javascript'></i></div>
+        <div class="item"><i class='bx bxl-docker'></i></div>
+        <div class="item"><i class='bx bxl-git'></i></div>
+        <div class="item"><i class='bx bxl-mongodb'></i></div>
+        <div class="item"><i class='bx bxl-python'></i></div>
+        <div class="item"><i class='bx bxl-nodejs'></i></div>
+        <div class="item"><i class='bx bxl-c-plus-plus'></i></div>
+        <div class="item"><i class='bx bxl-tailwind-css'></i></div>
+        <div class="item"><i class='bx bxl-github'></i></div>
     </div>
+</div>
 
-    <h5 class="seprator" id="projects">Projects</h5>
-    <div class="wrapper">
-        <div class="marquee">
-            <div class="guarantee">
-                <div class="item">
-                    <div class="info">
-                        <h3>Food Ordering App</h3>
-                        <p> Food Ordering App with Google authentication, OTP verification and Map</p>
-                        <button><a href="https://food-app-m2.vercel.app/">visit</a></button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="info">
-                        <h3>E-commerce website with chatbot</h3>
-                        <p> E-commerce website built using MERN Stack and tailwind css</p>
-                        <button><a href="https://urbanauramart.vercel.app/">visit</a></button>
-                    </div>
-                </div>
-                
-                <div class="item">
-                    <div class="info">
-                        <h3>Book Collection</h3>
-                        <p> Store and Management of Books </p>
-                        <button><a href="https://bk-collection.vercel.app/">visit</a></button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="info">
-                        <h3>Placement Analysis</h3>
-                        <p> Machine learning program to Predict Placement chances based on certain inputs given by
-                            student </p>
-                        <button><a href="https://placement-analysis-and-progress-tracking.vercel.app/">visit</a></button>
+<h5 class="seprator" id="projects">Projects</h5>
 
-                    </div>
+<div class="wrapper">
+    <div class="marquee">
+        <div class="guarantee">
+            <div class="item">
+                <div class="info">
+                    <h3>Food Ordering App</h3>
+                    <p> Food Ordering App with Google authentication, OTP verification and Map</p>
+                    <button><a href="https://food-app-m2.vercel.app/">visit</a></button>
                 </div>
-                <div class="item">
-                    <div class="info">
-                        <h3>Call Center EMS</h3>
-                        <p> Call Center Employee Management Sytem using MYSQL and React</p>
-                        <button><a href="https://github.com/Shreyashs98/Call_Center_EMS_react_mysql.git">visit</a></button>
-                    </div>
+            </div>
+            <div class="item">
+                <div class="info">
+                    <h3>E-commerce website with chatbot</h3>
+                    <p> E-commerce website built using MERN Stack and tailwind css</p>
+                    <button><a href="https://urbanauramart.vercel.app/">visit</a></button>
                 </div>
-                <div class="item">
-                    <div class="info">
-                        <h3>Airport parking</h3>
-                        <p> Airport parking website that is used to manage parking in the Airport</p>
-                        <button><a href="https://airport-project-live.vercel.app/">visit</a></button>
-                    </div>
+            </div>
+            <div class="item">
+                <div class="info">
+                    <h3>Book Collection</h3>
+                    <p> Store and Management of Books </p>
+                    <button><a href="https://bk-collection.vercel.app/">visit</a></button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="info">
+                    <h3>Placement Analysis</h3>
+                    <p> Machine learning program to Predict Placement chances based on certain inputs given by student </p>
+                    <button><a href="https://placement-analysis-and-progress-tracking.vercel.app/">visit</a></button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="info">
+                    <h3>Call Center EMS</h3>
+                    <p> Call Center Employee Management Sytem using MYSQL and React</p>
+                    <button><a href="https://github.com/Shreyashs98/Call_Center_EMS_react_mysql.git">visit</a></button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="info">
+                    <h3>Airport parking</h3>
+                    <p> Airport parking website that is used to manage parking in the Airport</p>
+                    <button><a href="https://airport-project-live.vercel.app/">visit</a></button>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <h5 class="seprator" id="experience">Experience</h5>
+<h5 class="seprator" id="experience">Experience</h5>
 
-    <div class="experience">
-        <h2>My Experience</h2>
-        <ul id="experience-list"></ul>
-    </div>
+<div class="experience">
+    <ul id="experience-list"></ul>
+</div>
 
-    <footer>
-
-
-        <div class="cols">
-            <div class="links-col">
-                <h4>Social Media</h4>
-                <a href="https://www.linkedin.com/in/shreyashs98">Linkedin</a>
-                <a href="https://github.com/Shreyashs98">Github</a>
-                <a href="https://leetcode.com/u/s09082003/">Leetcode</a>
-            </div>
-
-            <div class="contact-col" id="contact">
-                <h4>Contact</h4>
-                <a href="mailto:s09082003@gmail.com">Email: s09082003@gmail.com</a>
-                <p>Phone: +91 9342369900</p>
-            </div>
+<footer>
+    <div class="cols">
+        <div class="links-col">
+            <h4>Social Media</h4>
+            <a href="https://www.linkedin.com/in/shreyashs98">Linkedin</a>
+            <a href="https://github.com/Shreyashs98">Github</a>
+            <a href="https://leetcode.com/u/s09082003/">Leetcode</a>
         </div>
-
-    </footer>
-    <script src="script.js"></script>
-
+        <div class="contact-col" id="contact">
+            <h4>Contact</h4>
+            <a href="mailto:s09082003@gmail.com">Email: s09082003@gmail.com</a>
+            <p>Phone: +91 9342369900</p>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
 </body>
-
 </html>

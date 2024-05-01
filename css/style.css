@@ -40,7 +40,7 @@ body {
 }
 
 .navbar ul li:hover a {
-    color: #007bff;
+    color: #ffcd19;
 }
 
 .navbar ul li:last-child a {
@@ -48,7 +48,7 @@ body {
 }
 
 .hire-btn {
-    background: #007bff;
+    background: #ffcd19;
     padding: 6px 30px;
     border: none;
     font-size: 16px;
@@ -80,7 +80,7 @@ body {
 }
 
 .typewriter h4 {
-    color: #007bff;
+    color: #ffcd19;
     overflow: hidden;
     border-right: .15em solid #ffffff;
     white-space: nowrap;
@@ -194,7 +194,7 @@ body {
 
 .guarantee .item .info a {
     margin-top: 10px;
-    color: #007bff;
+    color: #ffcd19;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -205,7 +205,7 @@ body {
 }
 
 .guarantee .item .info button:hover {
-    background: #007bff;
+    background: #ffcd19;
 }
 
 
@@ -250,7 +250,7 @@ body {
     background: rgba(6, 6, 6, 0.333);
     display: inline-block;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.361);
-    color: #007bff;
+    color: #ffcd19;
     border-radius: 12px;
 }
 
@@ -331,7 +331,7 @@ body {
 
 .skills .right .item i {
     font-size: 40px;
-    color: #007bff;
+    color: #ffcd19;
     align-items: center;
 }
 
@@ -342,7 +342,7 @@ body {
 }
 
 .experience h2 {
-    color: #007bff;
+    color: #ffcd19;
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -422,7 +422,7 @@ footer .cols .links-col a {
 }
 
 footer .cols .links-col a:hover {
-    color: #007bff;
+    color: #ffcd19;
 }
 
 footer .cols .contact-col {
@@ -440,7 +440,7 @@ footer .cols .contact-col a {
 }
 
 footer .cols .contact-col a:hover {
-    color: #007bff;
+    color: #ffcd19;
 }
 
 footer .cols .contact-col form {
