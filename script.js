@@ -28,8 +28,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 function downloadResume() {
-    const resumeUrl = './assets/resume1.png';
-    const fileName = 'resume.png';
+    const resumeUrl = './assets/SHREYAS_HS.pdf';
+    const fileName = 'SHREYAS_HS.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = fileName;
